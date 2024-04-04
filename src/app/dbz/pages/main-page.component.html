@@ -1,0 +1,24 @@
+<h1>DBZ Personajes</h1>
+<hr>
+
+<div class="row">
+  <div class="col">
+
+    <!-- Se le pasa por input la lista padre characters a su hijo characterList-->
+    <app-dbz-list [characterList]="characters"
+    (onDelete)="onDeleteCharacter(characters[$event].id!)">
+
+    </app-dbz-list>
+
+  </div>
+
+  <div class="col">
+
+
+    <dbz-add-character (onNewCharacter)="onNewCharacter($event)">
+
+
+    </dbz-add-character>
+
+  </div>
+</div>
